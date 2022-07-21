@@ -7,6 +7,8 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "codegen": "npx dotenv-run-script graphql-codegen",
+    "graphql-codegen": "yarn workspace graphql-codegen codegen",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
