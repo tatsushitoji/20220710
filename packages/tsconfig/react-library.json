@@ -4,7 +4,9 @@
   "extends": "./base.json",
   "compilerOptions": {
     "lib": [
-      "ES2015"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
     "module": "ESNext",
     "target": "ES6",
