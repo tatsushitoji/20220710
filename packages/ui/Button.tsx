@@ -1,1 +1,5 @@
-export const Button = () => <button type="button">Boop</button>;
+import { Button as MaterialButton } from "@mui/material";
+
+export const Button = () => (
+  <MaterialButton variant="contained">Boop</MaterialButton>
+);
