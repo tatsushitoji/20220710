@@ -7,11 +7,13 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build-storybook": "yarn workspace storybook build-storybook",
     "codegen": "npx dotenv-run-script graphql-codegen",
     "graphql-codegen": "yarn workspace graphql-codegen codegen",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "storybook": "yarn workspace storybook storybook"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
