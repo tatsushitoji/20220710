@@ -4,13 +4,10 @@
 name: "Chromatic"
 
 # Event for the workflow
-on: push
-
-# あとで以下のようにfilterをかける
-# on:
-#   push:
-#     branches:
-#       - "**ui/**"
+on:
+  push:
+    branches:
+      - "**ui/**"
 
 # List of jobs
 jobs:
