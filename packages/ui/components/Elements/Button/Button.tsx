@@ -1,13 +1,11 @@
-import type { ComponentProps, VFC } from "react";
-import { Button as MaterialButton } from "@mui/material";
+import { Button as MaterialButton, ButtonProps } from "@mui/material";
 
-type Props = {
+type Props = ButtonProps & {
   label: string;
-  onClick?: ComponentProps<typeof MaterialButton>["onClick"];
 };
 
-export const Button: VFC<Props> = ({ label, onClick }) => (
-  <MaterialButton variant="contained" onClick={onClick}>
+export const Button = ({ label, onClick, ...props }: Props) => (
+  <MaterialButton {...props} variant="contained" onClick={onClick}>
     {label}
   </MaterialButton>
 );
