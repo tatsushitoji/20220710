@@ -6,7 +6,7 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.ts*"
+    "lint": "eslint **/*.ts*"
   },
   "devDependencies": {
     "@types/react": "^17.0.37",
