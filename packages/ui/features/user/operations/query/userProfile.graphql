@@ -1,0 +1,7 @@
+query userProfile {
+  viewer {
+    avatarUrl
+    login
+    resourcePath
+  }
+}
