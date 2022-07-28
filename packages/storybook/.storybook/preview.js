@@ -1,4 +1,8 @@
+import { initialize, mswDecorator } from "msw-storybook-addon";
 import { UIProvider } from "ui";
+
+// Initialize MSW
+initialize();
 
 /** @type {import('@storybook/react').DecoratorFn}  */
 const withUIProvider = (Story) => (
@@ -8,7 +12,7 @@ const withUIProvider = (Story) => (
 );
 
 /** @type {import('@storybook/react').DecoratorFn[]}  */
-export const decorators = [withUIProvider];
+export const decorators = [mswDecorator, withUIProvider];
 
 /** @type {import('@storybook/react').Parameters} */
 export const parameters = {

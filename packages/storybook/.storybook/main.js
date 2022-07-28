@@ -1,3 +1,4 @@
+const path = require("path");
 const webpack = require("webpack");
 
 /** @type {import("@storybook/react/types").StorybookConfig} */
@@ -16,6 +17,7 @@ const storybookConfig = {
   core: {
     builder: "@storybook/builder-webpack5",
   },
+  staticDirs: [path.join(__dirname, "../../mock/public")],
   webpackFinal: (config) => ({
     ...config,
     plugins: [
