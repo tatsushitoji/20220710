@@ -14,11 +14,14 @@
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
-    "chromatic": "^6.7.1"
+    "chromatic": "^6.7.1",
+    "stream-browserify": "^3.0.0",
+    "ui": "*",
+    "webpack": "^5.74.0"
   },
   "dependencies": {},
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }
 }
