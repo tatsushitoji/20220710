@@ -1,8 +1,15 @@
 import { initialize, mswDecorator } from "msw-storybook-addon";
-import { UIProvider } from "ui";
+import { UIProvider, UrqlProvider } from "ui";
 
 // Initialize MSW
 initialize();
+
+/** @type {import('@storybook/react').DecoratorFn}  */
+const withUrqlProvider = (Story) => (
+  <UrqlProvider>
+    <Story />
+  </UrqlProvider>
+);
 
 /** @type {import('@storybook/react').DecoratorFn}  */
 const withUIProvider = (Story) => (
@@ -12,7 +19,7 @@ const withUIProvider = (Story) => (
 );
 
 /** @type {import('@storybook/react').DecoratorFn[]}  */
-export const decorators = [mswDecorator, withUIProvider];
+export const decorators = [mswDecorator, withUrqlProvider, withUIProvider];
 
 /** @type {import('@storybook/react').Parameters} */
 export const parameters = {

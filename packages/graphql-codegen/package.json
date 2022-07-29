@@ -5,11 +5,13 @@
   "scripts": {
     "codegen": "PERSONAL_ACCESS_TOKEN=$GITHUB_PERSONAL_ACCESS_TOKEN graphql-codegen --config codegen.yml"
   },
-  "main": "index.js",
+  "main": "index.ts",
+  "types": "index.ts",
   "license": "MIT",
   "dependencies": {
     "@graphql-codegen/cli": "^2.8.0",
     "@graphql-codegen/typescript": "^2.7.1",
+    "@graphql-codegen/typescript-msw": "^1.1.2",
     "@graphql-codegen/typescript-operations": "^2.5.1",
     "@graphql-codegen/typescript-urql": "^3.6.1",
     "graphql": "^16.5.0"

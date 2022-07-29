@@ -12,3 +12,10 @@ generates:
       - "typescript-urql"
     config:
       enumsAsTypes: true
+  generated/mockHandler.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-msw"
+    config:
+      enumsAsTypes: true

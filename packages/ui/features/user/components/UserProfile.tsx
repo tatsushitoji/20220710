@@ -1,16 +1,24 @@
 import { Avatar, Card, CardHeader } from "@mui/material";
-import { User } from "../types";
+import { Suspense } from "react";
+import { useUserProfile } from "../hooks/useUserProfile";
 
-type Props = {
-  user: User;
+export const UserProfileContent = () => {
+  const {
+    userData: { avatarUrl, name, resourcePath },
+  } = useUserProfile();
+  return (
+    <Card sx={{ maxWidth: 240 }}>
+      <CardHeader
+        avatar={<Avatar alt={name} src={avatarUrl} />}
+        title={name}
+        subheader={resourcePath}
+      />
+    </Card>
+  );
 };
 
-export const UserProfile = ({ user }: Props) => (
-  <Card sx={{ maxWidth: 240 }}>
-    <CardHeader
-      avatar={<Avatar alt={user.name} src={user.avatarUrl} />}
-      title={user.name}
-      subheader={user.resourcePath}
-    />
-  </Card>
+export const UserProfile = () => (
+  <Suspense fallback={<>loading</>}>
+    <UserProfileContent />
+  </Suspense>
 );
