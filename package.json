@@ -1,29 +1,32 @@
 {
+  "private": true,
   "name": "20220710",
   "version": "0.0.0",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "build": "turbo run build",
     "build-storybook": "yarn workspace storybook build-storybook",
     "codegen": "npx dotenv-run-script graphql-codegen",
-    "graphql-codegen": "yarn workspace graphql-codegen codegen",
     "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "graphql-codegen": "yarn workspace graphql-codegen codegen",
+    "lint": "turbo run lint",
     "storybook": "yarn workspace storybook start"
   },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
   "devDependencies": {
     "eslint-config-custom": "*",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "latest",
+    "tsc-files": "^1.1.3",
     "turbo": "^1.3.4"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
   },
-  "dependencies": {},
   "packageManager": "yarn@1.22.15"
 }
