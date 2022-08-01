@@ -12,6 +12,8 @@ const client = createClient({
         : "",
     },
   },
+  // FIXME: イマイマはstorybookでstoryごとにcacheなしの状態で確認したいため
+  requestPolicy: "network-only",
   suspense: true,
 });
 

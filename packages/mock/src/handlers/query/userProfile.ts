@@ -14,3 +14,16 @@ export const mockUserProfile = mockHandler.mockUserProfileQuery(
     );
   }
 );
+
+export const mockUserProfileError = mockHandler.mockUserProfileQuery(
+  (_, res, ctx) => {
+    return res(
+      ctx.delay(300),
+      ctx.errors([
+        {
+          message: "Failed to log in: username or password are invalid",
+        },
+      ])
+    );
+  }
+);

@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { mockUserProfile } from "mock";
+import { mockUserProfile, mockUserProfileError } from "mock";
 import { UserProfile } from "./UserProfile";
 
 type Component = typeof UserProfile;
@@ -17,3 +17,8 @@ const meta: Meta = {
 export default meta;
 
 export const Default: Story = {};
+
+export const Error: Story = {};
+Error.parameters = {
+  msw: { handlers: [mockUserProfileError] },
+};
