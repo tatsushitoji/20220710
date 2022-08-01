@@ -19,3 +19,6 @@ generates:
       - "typescript-msw"
     config:
       enumsAsTypes: true
+config:
+  scalars:
+    URI: string
