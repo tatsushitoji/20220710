@@ -1,13 +1,13 @@
 {
-  "name": "graphql-codegen",
-  "version": "0.0.0",
   "private": true,
+  "name": "@/graphql-codegen",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "index.ts",
   "scripts": {
     "codegen": "PERSONAL_ACCESS_TOKEN=$GITHUB_PERSONAL_ACCESS_TOKEN graphql-codegen --config codegen.yml"
   },
-  "main": "index.ts",
   "types": "index.ts",
-  "license": "MIT",
   "dependencies": {
     "@graphql-codegen/cli": "^2.8.0",
     "@graphql-codegen/typescript": "^2.7.1",

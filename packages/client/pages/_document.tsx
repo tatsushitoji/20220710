@@ -9,7 +9,7 @@ import {
   createEmotionCache,
   createServer as createEmotionServer,
   theme,
-} from "ui";
+} from "@/ui";
 
 type Props = DocumentInitialProps & {
   emotionStyleTags: JSX.Element;
@@ -29,7 +29,6 @@ export default class MyDocument extends Document<Props> {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           <meta name="emotion-insertion-point" content="" />
-          {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
           {this.props.emotionStyleTags}
         </Head>
         <body>
@@ -71,7 +70,6 @@ MyDocument.getInitialProps = async (ctx) => {
   // You can consider sharing the same Emotion cache between all the SSR requests to speed up performance.
   // However, be aware that it can have global side effects.
   const cache = createEmotionCache();
-  // eslint-disable-next-line @typescript-eslint/unbound-method
   const { extractCriticalToChunks } = createEmotionServer(cache);
 
   ctx.renderPage = () =>

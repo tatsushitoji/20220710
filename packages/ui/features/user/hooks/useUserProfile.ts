@@ -1,4 +1,4 @@
-import { api } from "graphql-codegen";
+import { api } from "@/graphql-codegen";
 import { User } from "../types";
 
 export const useUserProfile = () => {

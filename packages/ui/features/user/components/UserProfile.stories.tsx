@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { mockUserProfile, mockUserProfileError } from "mock";
+import { mockUserProfile, mockUserProfileError } from "@/mock";
 import { UserProfile } from "./UserProfile";
 
 type Component = typeof UserProfile;
@@ -7,7 +7,7 @@ type Meta = ComponentMeta<Component>;
 type Story = ComponentStoryObj<Component>;
 
 const meta: Meta = {
-  title: "features/user/userprofile",
+  title: "features/user/Userprofile",
   component: UserProfile,
   parameters: {
     msw: { handlers: [mockUserProfile] },

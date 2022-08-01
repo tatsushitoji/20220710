@@ -1,5 +1,5 @@
 import { initialize, mswDecorator } from "msw-storybook-addon";
-import { UIProvider, UrqlProvider } from "ui";
+import { UIProvider, UrqlProvider } from "@/ui";
 
 // Initialize MSW
 initialize();

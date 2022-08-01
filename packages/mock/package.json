@@ -1,16 +1,16 @@
 {
-  "name": "mock",
-  "version": "0.0.0",
   "private": true,
+  "name": "@/mock",
+  "version": "0.0.0",
   "main": "index.ts",
   "types": "index.ts",
+  "dependencies": {
+    "@/graphql-codegen": "*"
+  },
   "devDependencies": {
     "msw": "^0.44.2"
   },
   "msw": {
     "workerDirectory": "public"
-  },
-  "dependencies": {
-    "graphql-codegen": "*"
   }
 }

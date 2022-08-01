@@ -1,9 +1,15 @@
 {
-  "name": "storybook",
-  "version": "0.0.0",
   "private": true,
+  "name": "@/storybook",
+  "version": "0.0.0",
   "main": "index.js",
+  "scripts": {
+    "build-storybook": "build-storybook",
+    "start": "start-storybook -p 6006"
+  },
+  "dependencies": {},
   "devDependencies": {
+    "@/ui": "*",
     "@babel/core": "^7.18.9",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
@@ -17,12 +23,6 @@
     "chromatic": "^6.7.1",
     "msw-storybook-addon": "^1.6.3",
     "stream-browserify": "^3.0.0",
-    "ui": "*",
     "webpack": "^5.74.0"
-  },
-  "dependencies": {},
-  "scripts": {
-    "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
   }
 }
