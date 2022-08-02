@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "graphql-codegen": "yarn workspace @packages/graphql-codegen codegen",
     "lint": "turbo run lint",
-    "storybook": "yarn workspace @packages/storybook start"
+    "storybook": "yarn workspace @packages/storybook start",
+    "tsc": "turbo run tsc"
   },
   "workspaces": [
     "packages/*"
