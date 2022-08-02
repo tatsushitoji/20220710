@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-storybook": "build-storybook",
+    "lint": "eslint **/*.js",
     "start": "start-storybook -p 6006"
   },
   "dependencies": {},

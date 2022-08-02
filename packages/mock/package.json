@@ -3,6 +3,9 @@
   "name": "@packages/mock",
   "version": "0.0.0",
   "main": "index.ts",
+  "scripts": {
+    "lint": "eslint **/*.ts"
+  },
   "types": "index.ts",
   "dependencies": {
     "@packages/graphql-codegen": "*"
