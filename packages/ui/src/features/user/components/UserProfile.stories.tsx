@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { mockUserProfile, mockUserProfileError } from "@/mock";
+import { mockUserProfile, mockUserProfileError } from "@packages/mock";
 import { UserProfile } from "./UserProfile";
 
 type Component = typeof UserProfile;

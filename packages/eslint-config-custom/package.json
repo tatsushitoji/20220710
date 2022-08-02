@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@/eslint-config-custom",
+  "name": "@packages/eslint-config-custom",
   "version": "0.0.0",
   "license": "MIT",
   "main": "index.js",

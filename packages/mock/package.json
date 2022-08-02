@@ -1,11 +1,11 @@
 {
   "private": true,
-  "name": "@/mock",
+  "name": "@packages/mock",
   "version": "0.0.0",
   "main": "index.ts",
   "types": "index.ts",
   "dependencies": {
-    "@/graphql-codegen": "*"
+    "@packages/graphql-codegen": "*"
   },
   "devDependencies": {
     "msw": "^0.44.2"

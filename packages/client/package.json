@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@/client",
+  "name": "@packages/client",
   "version": "0.0.0",
   "scripts": {
     "build": "next build",
@@ -9,14 +9,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "@/ui": "*",
+    "@packages/ui": "*",
     "next": "12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@/eslint-config-custom": "*",
-    "@/tsconfig": "*",
+    "@packages/eslint-config-custom": "*",
+    "@packages/tsconfig": "*",
     "@types/node": "^17.0.12",
     "@types/react": "17.0.37",
     "eslint": "7.32.0",

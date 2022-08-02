@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { Button } from "@/ui";
+import { Button } from "@packages/ui";
 
 const Web: NextPage = () => (
   <div>

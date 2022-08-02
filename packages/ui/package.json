@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@/ui",
+  "name": "@packages/ui",
   "version": "0.0.0",
   "license": "MIT",
   "main": "./index.tsx",
@@ -9,20 +9,20 @@
   },
   "types": "./index.tsx",
   "dependencies": {
-    "@/graphql-codegen": "*",
     "@emotion/cache": "^11.9.3",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.1",
+    "@packages/graphql-codegen": "*",
     "graphql": "^16.5.0",
     "urql": "^2.2.3"
   },
   "devDependencies": {
-    "@/eslint-config-custom": "*",
-    "@/mock": "*",
-    "@/tsconfig": "*",
+    "@packages/eslint-config-custom": "*",
+    "@packages/mock": "*",
+    "@packages/tsconfig": "*",
     "@types/react": "17.0.37",
     "@types/react-dom": "17.0.11",
     "eslint": "^7.32.0",

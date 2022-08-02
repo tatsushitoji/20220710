@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "scripts": {
     "build": "turbo run build",
-    "build-storybook": "yarn workspace @/storybook build-storybook",
+    "build-storybook": "yarn workspace @packages/storybook build-storybook",
     "codegen": "npx dotenv-run-script graphql-codegen",
     "dev": "turbo run dev --parallel",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "graphql-codegen": "yarn workspace @/graphql-codegen codegen",
+    "graphql-codegen": "yarn workspace @packages/graphql-codegen codegen",
     "lint": "turbo run lint",
-    "storybook": "yarn workspace @/storybook start"
+    "storybook": "yarn workspace @packages/storybook start"
   },
   "workspaces": [
     "packages/*"

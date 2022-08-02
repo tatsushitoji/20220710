@@ -9,7 +9,7 @@ import {
   createEmotionCache,
   createServer as createEmotionServer,
   theme,
-} from "@/ui";
+} from "@packages/ui";
 
 type Props = DocumentInitialProps & {
   emotionStyleTags: JSX.Element;

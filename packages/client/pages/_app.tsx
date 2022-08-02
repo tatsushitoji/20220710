@@ -3,7 +3,7 @@ import {
   UIProvider,
   EmotionCacheProvider,
   EmotionCacheProviderProps,
-} from "@/ui";
+} from "@packages/ui";
 
 type MyAppProps = AppProps & EmotionCacheProviderProps;
 

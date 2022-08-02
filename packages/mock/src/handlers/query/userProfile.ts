@@ -1,4 +1,4 @@
-import { mockHandler } from "@/graphql-codegen";
+import { mockHandler } from "@packages/graphql-codegen";
 
 export const mockUserProfile = mockHandler.mockUserProfileQuery(
   (_, res, ctx) => {
