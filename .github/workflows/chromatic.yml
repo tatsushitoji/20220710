@@ -27,5 +27,8 @@ jobs:
         run: GH_PERSONAL_ACCESS_TOKEN=${{secrets.GH_PERSONAL_ACCESS_TOKEN}} yarn codegen:ci
       - name: Build storybook
         run: yarn build-storybook -o ./storybook/chromatic-storybook
-      - name: Publish to Chromatic
-        run: yarn workspace @packages/storybook chromatic --project-token ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      - uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true
+          workingDir: packages/storybook
