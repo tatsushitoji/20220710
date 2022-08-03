@@ -6,6 +6,7 @@ type Meta = ComponentMeta<Component>;
 type Story = ComponentStoryObj<Component>;
 
 const meta: Meta = {
+  title: "components/Elements/Button",
   component: Button,
   args: {
     label: "boop",
