@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "index.ts",
   "scripts": {
-    "codegen": "PERSONAL_ACCESS_TOKEN=$GITHUB_PERSONAL_ACCESS_TOKEN graphql-codegen --config codegen.yml"
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "types": "index.ts",
   "dependencies": {
