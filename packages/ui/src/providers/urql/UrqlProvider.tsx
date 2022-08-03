@@ -7,8 +7,8 @@ const client = createClient({
     : "/graphql",
   fetchOptions: {
     headers: {
-      authorization: process.env.GITHUB_PERSONAL_ACCESS_TOKEN
-        ? `Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`
+      authorization: process.env.GH_PERSONAL_ACCESS_TOKEN
+        ? `Bearer ${process.env.GH_PERSONAL_ACCESS_TOKEN}`
         : "",
     },
   },
