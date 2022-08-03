@@ -12,21 +12,20 @@ on:
 # List of jobs
 jobs:
   chromatic-deployment:
-    # Operating System
     runs-on: ubuntu-latest
-    # Job steps
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "lts"
+          cache: "yarn"
       - name: Install dependencies
         run: yarn
       - name: Generate code
         run: yarn codegen
-        # 👇 Adds Chromatic as a step in the workflow
+      - name: Build storybook
+        run: yarn build-storybook -o ./storybook/chromatic-storybook
       - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        # Chromatic GitHub Action options
-        with:
-          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          exitZeroOnChanges: true
-          workingDir: packages/storybook
+        run: yarn run chromatic --project-token ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
