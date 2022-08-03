@@ -5,7 +5,7 @@
   "scripts": {
     "build": "turbo run build",
     "build-storybook": "yarn workspace @packages/storybook build-storybook",
-    "codegen": "npx dotenv-run-script graphql-codegen",
+    "codegen": "export $(cat .env | grep -v ^# | xargs); yarn graphql-codegen",
     "dev": "turbo run dev --parallel",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "graphql-codegen": "yarn workspace @packages/graphql-codegen codegen",
