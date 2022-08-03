@@ -9,11 +9,11 @@
   },
   "types": "index.ts",
   "dependencies": {
-    "@graphql-codegen/cli": "^2.8.0",
-    "@graphql-codegen/typescript": "^2.7.1",
-    "@graphql-codegen/typescript-msw": "^1.1.2",
-    "@graphql-codegen/typescript-operations": "^2.5.1",
-    "@graphql-codegen/typescript-urql": "^3.6.1",
-    "graphql": "^16.5.0"
+    "@graphql-codegen/cli": "2.10.0",
+    "@graphql-codegen/typescript": "2.7.2",
+    "@graphql-codegen/typescript-msw": "1.1.2",
+    "@graphql-codegen/typescript-operations": "2.5.2",
+    "@graphql-codegen/typescript-urql": "3.6.2",
+    "graphql": "16.5.0"
   }
 }
