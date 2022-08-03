@@ -12,7 +12,7 @@
     "@packages/graphql-codegen": "*"
   },
   "devDependencies": {
-    "msw": "^0.44.2"
+    "msw": "0.44.2"
   },
   "msw": {
     "workerDirectory": "public"
