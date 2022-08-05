@@ -1,4 +1,4 @@
-import * as api from "./generated/api";
-import * as mockHandler from "./generated/mockHandler";
+import * as api from './generated/api'
+import * as mockHandler from './generated/mockHandler'
 
-export { api, mockHandler };
+export { api, mockHandler }

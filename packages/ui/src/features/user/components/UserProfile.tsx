@@ -1,21 +1,21 @@
-import { Avatar, Card, CardHeader, Skeleton } from "@mui/material";
-import { Suspense } from "react";
-import { useUserProfile } from "../hooks/useUserProfile";
+import { Avatar, Card, CardHeader, Skeleton } from '@mui/material'
+import { Suspense } from 'react'
+import { useUserProfile } from '../hooks/useUserProfile'
 
 const UserProfileContent = () => {
-  const { user } = useUserProfile();
+  const { user } = useUserProfile()
   if (!user) {
-    return <CardHeader title="ユーザー情報の取得に失敗しました" />;
+    return <CardHeader title="ユーザー情報の取得に失敗しました" />
   }
-  const { avatarUrl, name, resourcePath } = user;
+  const { avatarUrl, name, resourcePath } = user
   return (
     <CardHeader
       avatar={<Avatar alt={name} src={avatarUrl} />}
       title={name}
       subheader={resourcePath}
     />
-  );
-};
+  )
+}
 
 const UserProfileSkeleton = () => (
   <CardHeader
@@ -39,7 +39,7 @@ const UserProfileSkeleton = () => (
       />
     }
   />
-);
+)
 
 export const UserProfile = () => (
   <Card sx={{ maxWidth: 240 }}>
@@ -47,4 +47,4 @@ export const UserProfile = () => (
       <UserProfileContent />
     </Suspense>
   </Card>
-);
+)

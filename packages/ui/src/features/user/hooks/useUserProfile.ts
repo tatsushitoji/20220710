@@ -1,16 +1,16 @@
-import { api } from "@packages/graphql-codegen";
-import { User } from "../types";
+import { api } from '@packages/graphql-codegen'
+import { User } from '../types'
 
 export const useUserProfile = () => {
-  const [{ data }] = api.useUserProfileQuery();
+  const [{ data }] = api.useUserProfileQuery()
   const user: User | undefined = data
     ? {
         avatarUrl: data?.viewer.avatarUrl,
         name: data?.viewer.login,
         resourcePath: data?.viewer.resourcePath,
       }
-    : undefined;
+    : undefined
   return {
     user,
-  };
-};
+  }
+}

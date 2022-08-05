@@ -4,16 +4,16 @@ import Document, {
   Main,
   NextScript,
   DocumentInitialProps,
-} from "next/document";
+} from 'next/document'
 import {
   createEmotionCache,
   createServer as createEmotionServer,
   theme,
-} from "@packages/ui";
+} from '@packages/ui'
 
 type Props = DocumentInitialProps & {
-  emotionStyleTags: JSX.Element;
-};
+  emotionStyleTags: JSX.Element
+}
 
 // FIXME: this class is copy and paste from https://github.com/mui/material-ui/blob/master/examples/nextjs-with-typescript/pages/_document.tsx
 export default class MyDocument extends Document<Props> {
@@ -36,13 +36,13 @@ export default class MyDocument extends Document<Props> {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with static-site generation (SSG).
-MyDocument.getInitialProps = async (ctx) => {
+MyDocument.getInitialProps = async ctx => {
   // Resolution order
   //
   // On the server:
@@ -65,37 +65,37 @@ MyDocument.getInitialProps = async (ctx) => {
   // 3. app.render
   // 4. page.render
 
-  const originalRenderPage = ctx.renderPage;
+  const originalRenderPage = ctx.renderPage
 
   // You can consider sharing the same Emotion cache between all the SSR requests to speed up performance.
   // However, be aware that it can have global side effects.
-  const cache = createEmotionCache();
-  const { extractCriticalToChunks } = createEmotionServer(cache);
+  const cache = createEmotionCache()
+  const { extractCriticalToChunks } = createEmotionServer(cache)
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App) =>
+      enhanceApp: App =>
         function EnhanceApp(props) {
           // @ts-expect-error AppにemotionCacheをpropsとして渡す拡張ができない型になっている
-          return <App emotionCache={cache} {...props} />;
+          return <App emotionCache={cache} {...props} />
         },
-    });
+    })
 
-  const initialProps = await Document.getInitialProps(ctx);
+  const initialProps = await Document.getInitialProps(ctx)
   // This is important. It prevents Emotion to render invalid HTML.
   // See https://github.com/mui/material-ui/issues/26561#issuecomment-855286153
-  const emotionStyles = extractCriticalToChunks(initialProps.html);
-  const emotionStyleTags = emotionStyles.styles.map((style) => (
+  const emotionStyles = extractCriticalToChunks(initialProps.html)
+  const emotionStyleTags = emotionStyles.styles.map(style => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(" ")}`}
+      data-emotion={`${style.key} ${style.ids.join(' ')}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
     />
-  ));
+  ))
 
   return {
     ...initialProps,
     emotionStyleTags,
-  };
-};
+  }
+}

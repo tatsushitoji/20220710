@@ -1,11 +1,11 @@
-import { AppProps } from "next/app";
+import { AppProps } from 'next/app'
 import {
   UIProvider,
   EmotionCacheProvider,
   EmotionCacheProviderProps,
-} from "@packages/ui";
+} from '@packages/ui'
 
-type MyAppProps = AppProps & EmotionCacheProviderProps;
+type MyAppProps = AppProps & EmotionCacheProviderProps
 
 const MyApp = ({ Component, pageProps, emotionCache }: MyAppProps) => (
   <EmotionCacheProvider emotionCache={emotionCache}>
@@ -13,6 +13,6 @@ const MyApp = ({ Component, pageProps, emotionCache }: MyAppProps) => (
       <Component {...pageProps} />
     </UIProvider>
   </EmotionCacheProvider>
-);
+)
 
-export default MyApp;
+export default MyApp

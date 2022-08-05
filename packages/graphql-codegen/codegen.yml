@@ -2,21 +2,21 @@ overwrite: true
 schema:
   - https://api.github.com/graphql:
       headers:
-        "Authorization": "Bearer ${GH_PERSONAL_ACCESS_TOKEN}"
-documents: "../**/*.graphql"
+        'Authorization': 'Bearer ${GH_PERSONAL_ACCESS_TOKEN}'
+documents: '../**/*.graphql'
 generates:
   generated/api.ts:
     plugins:
-      - "typescript"
-      - "typescript-operations"
-      - "typescript-urql"
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-urql'
     config:
       enumsAsTypes: true
   generated/mockHandler.ts:
     plugins:
-      - "typescript"
-      - "typescript-operations"
-      - "typescript-msw"
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-msw'
     config:
       enumsAsTypes: true
 config:

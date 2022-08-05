@@ -1,3 +1,3 @@
-import createEmotionServer from "@emotion/server/create-instance";
+import createEmotionServer from '@emotion/server/create-instance'
 
-export const createServer = createEmotionServer;
+export const createServer = createEmotionServer

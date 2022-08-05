@@ -1,26 +1,26 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path')
+const webpack = require('webpack')
 
 /** @type {import("@storybook/react/types").StorybookConfig} */
 const storybookConfig = {
-  stories: ["../../ui/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ['../../ui/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
   ],
-  framework: "@storybook/react",
+  framework: '@storybook/react',
   core: {
-    builder: "@storybook/builder-webpack5",
+    builder: '@storybook/builder-webpack5',
   },
-  staticDirs: [path.join(__dirname, "../../mock/public")],
-  webpackFinal: (config) => ({
+  staticDirs: [path.join(__dirname, '../../mock/public')],
+  webpackFinal: config => ({
     ...config,
     plugins: [
       ...config.plugins,
       // ref: https://github.com/storybookjs/storybook/issues/17344
       new webpack.ProvidePlugin({
-        Buffer: ["buffer", "Buffer"],
+        Buffer: ['buffer', 'Buffer'],
       }),
     ],
 
@@ -29,10 +29,10 @@ const storybookConfig = {
       fallback: {
         ...config.resolve.fallback,
         // Webpack 5 no longer polyfills Node.js core modules automatically ref: https://webpack.js.org/configuration/resolve/#resolvefallback
-        stream: require.resolve("stream-browserify"),
+        stream: require.resolve('stream-browserify'),
       },
     },
   }),
-};
+}
 
-module.exports = storybookConfig;
+module.exports = storybookConfig

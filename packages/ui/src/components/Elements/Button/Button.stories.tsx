@@ -1,18 +1,18 @@
-import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { Button } from "./Button";
+import type { ComponentMeta, ComponentStoryObj } from '@storybook/react'
+import { Button } from './Button'
 
-type Component = typeof Button;
-type Meta = ComponentMeta<Component>;
-type Story = ComponentStoryObj<Component>;
+type Component = typeof Button
+type Meta = ComponentMeta<Component>
+type Story = ComponentStoryObj<Component>
 
 const meta: Meta = {
-  title: "components/Elements/Button",
+  title: 'components/Elements/Button',
   component: Button,
   args: {
-    label: "boop",
+    label: 'boop',
   },
-};
+}
 
-export default meta;
+export default meta
 
-export const Primary: Story = {};
+export const Primary: Story = {}
