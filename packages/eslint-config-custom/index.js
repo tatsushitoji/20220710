@@ -6,11 +6,10 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'next/core-web-vitals',
-    'prettier',
   ],
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
+    'import/prefer-default-export': 'off',
     'react/jsx-key': 'off',
     'react/jsx-props-no-spreading': [
       'error',
@@ -25,6 +24,8 @@ module.exports = {
       'error',
       { namedComponents: 'arrow-function' },
     ],
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
   },
 }

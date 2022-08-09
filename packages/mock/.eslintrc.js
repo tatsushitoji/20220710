@@ -2,7 +2,7 @@
 
 module.exports = {
   root: true,
-  extends: ['@packages/eslint-config-custom'],
+  extends: ['@packages/eslint-config-custom', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.json'],

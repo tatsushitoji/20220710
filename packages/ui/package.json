@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "./index.tsx",
   "scripts": {
-    "lint": "eslint **/*.ts*",
+    "lint": "eslint .",
     "tsc": "tsc"
   },
   "types": "./index.tsx",
