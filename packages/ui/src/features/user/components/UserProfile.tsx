@@ -1,4 +1,6 @@
 import { Avatar, Card, CardHeader, Skeleton } from '@mui/material'
+// TODO: dependenciesに移動する
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Suspense } from 'react'
 import { useUserProfile } from '../hooks/useUserProfile'
 
