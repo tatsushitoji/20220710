@@ -2,7 +2,7 @@ import { api } from '@packages/graphql-codegen'
 import { User } from '../types'
 
 export const useUserProfile = () => {
-  const [{ data }] = api.useUserProfileQuery()
+  const [{ data, fetching, error }] = api.useUserProfileQuery()
   const user: User | undefined = data
     ? {
         avatarUrl: data?.viewer.avatarUrl,
@@ -12,5 +12,7 @@ export const useUserProfile = () => {
     : undefined
   return {
     user,
+    fetching,
+    error,
   }
 }
